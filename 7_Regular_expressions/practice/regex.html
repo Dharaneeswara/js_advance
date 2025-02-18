@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let reg=new RegExp("^hello","i");
+        // console.log(reg.test("Hello world"));
+        
+        // let expres=/^hello/;
+        // console.log(expres.test("hi hello world"));
+
+        // let wrd=/^hello world$/;
+        // console.log(wrd.test("hello world"));
+        
+        // let ex=/are/;
+        // console.log(ex.exec("hello how are you"));
+
+        // let mth="hello world";
+        // console.log(mth.match(/l/g));
+
+        // let paragraph="hi dharaneeswaran how are you? I on the flow of my life!";
+        // let expression=/e/g;
+        // console.log(paragraph.match(expression));
+
+        // let paragraph="hi Dharaneeswaran how are you? I'm on the flow of my life!";
+        // // let expression=/[^e]/g;
+        // // let expression=/[A-Z]/g;
+        // let expression=/[a-z]/g;
+        // // console.log(paragraph.match(expression));
+        // console.log(paragraph.match());
+        
+        // let para="hello frineds what's comming on now?!";
+        // let replaceText=para.replace(/comming/, "going");
+        // console.log(replaceText);
+        
+        // let str="hi guys have we done this work right";
+        // let splt=str.split(" ");
+        // console.log(splt);
+
+        // let dates="2025-01-15"
+        // let regex=/^\d{4}-\d{2}-\d{2}$/
+        // console.log(regex.test(dates));//true
+        // let math=dates.match(regex)
+        // let val= math?math[0]:null
+        // console.log(math);//whole value info
+        // console.log(val);// date only
+        
+        // function a(b){
+        //     return !isNaN(new Date(b))
+        // }
+        // console.log(a("2019/05/12"));
+
+        // let dates="2019/02/12";
+        // let math=new Date(dates);
+        // console.log(math);
+        
+        // let dateval="2003-02-27";
+        // let patternval=/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/;
+
+        // console.log(patternval.test(dateval));
+        
+        // let namePttern=/^[A-Za-z]+(\s[A-Za-z])?\s[A-Za-z]$/;
+        // // let a=/^[A-Za-z]\w{2,10}$/;
+        // let fname="Dharaneeswaran V";
+        // console.log(namePttern.test(fname));
+        
+        //NEW ONE FOR CRUD VALIDATION
+        // let namePttern=/^[A-Z]\s[A-Za-z]+(\s[A-Za-z]+)*[a-z]+$/;
+        let namePttern=/^[A-Za-z]+(\s[A-Za-z]+)*\s[A-Z]{1,2}$/;         //<--------IT's PERFECT
+        // let namePttern=/^[A-Z]\s[A-Za-z]+$/;
+        let name="Dharaneeswaran V";
+        let didMatch=namePttern.test(name);
+        console.log(didMatch);
+        
+        
+    </script>
+</body>
+</html>
