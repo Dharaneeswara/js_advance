@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CRUD.css">
+    <title>New Employee Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>EMPLOYEE NEXUS</h2>
+        <form>
+            <div class="form-group">
+                <div style="display: flex; flex-direction: column; width: 50%;">
+
+                    <input type="text" class="formInput" style="width: 100%;" id="fname" placeholder="Name *" required >
+                    <span class="errorMsg"></span>
+                </div>
+
+                <select id="companies" class="formInput">
+                    <option>Select Company here...</option>
+                </select>
+                <span class="errorMsg" style="margin-left: 52%; margin-top: -40px;"></span>
+            </div>
+            <div  class="form-group">
+                <div style="display: flex; flex-direction: column; width: 50%;">
+                <input type="text" class="formInput" style="width: 100%;" id="designation" placeholder="Designation">
+                <span class="errorMsg"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="display: flex; flex-direction: column; width: 50%;">
+                <input type="text" class="formInput" style="width: 100%;" id="number" placeholder="Personal Number">
+                <span class="errorMsg"></span>
+                </div>
+                <input type="email" class="formInput" id="mail" placeholder="Email *" required>
+                <span class="errorMsg" style="margin-left: 52%;margin-top: -40px;"></span>
+            </div>
+            <div class="form-group">
+                <textarea class="textarea" class="formInput" id="address" placeholder="Address" rows="10" cols="165"></textarea>
+                <span class="errorMsg"></span>
+            </div>
+            
+            
+            <div class="form-group">
+                <div style="display: flex; flex-direction: column; width: 48%;">
+                <select id="country" class="formInput" style="width: 100%;">
+                    <option>Country</option>
+                </select>
+                <span class="errorMsg"></span>
+                </div>
+                <select id="state" class="formInput">
+                    <option>State</option>
+                </select>
+                <span class="errorMsg" style="margin-left: 50%;margin-top: -40px;"></span>
+                <!-- <input type="text" placeholder="State"> -->
+            </div>
+            <div style="display: flex; flex-direction: column; width: 48%;">
+            <input type="text" class="formInput" style="width: 100%;" id="pinCode" placeholder="Pincode">
+            <span class="errorMsg"></span>
+            </div>
+            <h3>Social Media</h3>
+            <div class="form-group">
+                <input type="url" id="linkedIn" class="formInput" placeholder="LinkedIn URL">
+                <span class="errorMsg"></span>
+                <input type="url" id="faceBook" class="formInput" placeholder="Facebook URL">
+                <span class="errorMsg"></span>
+            </div>
+            <div class="form-group">
+                <input type="url" id="twitter" class="formInput" placeholder="Twitter URL">
+                <span class="errorMsg"></span>
+                <input type="url" id="instagram" class="formInput" placeholder="Instagram URL">
+                <span class="errorMsg"></span>
+            </div>
+            <div class="form-actions">
+                <button type="button" id="register" class="submit-btn">Register</button>
+                <button type="button" id="update" class="submit-btn updatebutton">Update</button>
+
+                <button type="button" id="reset" class="cancel-btn">Reset</button>
+            </div>
+
+            <!--DATA'S SHOWING PLACE-->
+            <div id="dataShow" style="width: 100%; background: lightgreen;">
+
+            </div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <input type="text" id="person">
+    <button id="rembtn"> click</button>
+    <script>
+
+      let person=document.getElementById("person");
+      let rembtn=document.getElementById("rembtn");
+
+      //NORMAL LOCALSTORAGE 
+     /* localStorage.setItem("a", "dharani");
+      console.log(localStorage.getItem("a"));
+      localStorage.removeItem("a"); */
+      // localStorage.clear()         //it cleare only the above data's only based on where we declared
+
+      //JSON LOCALSTORAGE
+      let arr = [
+        {
+          id: 1,
+          name: "kalai",
+        },
+        {
+          id: 2,
+          name: "guna",
+        },
+        {
+          id: 3,
+          name: "guna",
+        },
+        {
+          id: 4,
+          name: "guna",
+        },
+      ];
+
+      // arr.map((val)=>{  //GETTING ARR VALUES IN NEWARRAY
+      //   let newval=val;
+      //   console.log(newval);
+      //   return newval;
+        
+      // })
+      let a=arr;   //COPY OF ARR FOR FILTER
+      console.log("a",a);
+      console.log(person.value);
+      
+      
+      rembtn.addEventListener("click",()=>{
+        a.filter((element)=>{
+          
+          // element.id!==2?console.log(element):console.log("not");
+          // element.id!==2?console.log(element):"";
+          element.id!=person.value?console.log(element):"";
+        });
+
+        // arr.map((elements)=>{
+          
+        //   console.log(elements);
+        //   elements.filter((element)=>{
+        //     let ans=element.id==2;
+        //     console.log(ans);
+        //     // return 
+        //   })
+        // })
+      })
+
+       /* let string=JSON.stringify(arr)
+        console.log("String",string);
+        let a=JSON.parse(string)
+        console.log("Parse",a); */
+        // localStorage.setItem("data",JSON.stringify(arr));
+      // let show = JSON.parse(localStorage.getItem("data"));
+      /* console.log(show); */
+      /* localStorage.removeItem("data") */
+      // localStorage.clear()
+      
+
+      // localStorage.clear()           //it cleare total data's in the local storage
+    </script>
+  </body>
+</html>
