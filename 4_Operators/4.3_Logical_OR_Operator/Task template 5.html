@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Payment Validation</h1>
+    <div id="cardStatus"></div>
+</head>
+<body>
+    <div id="paymentType"></div>
+    <script>
+        const gpayPayment=true;
+        const creditcardPayment=true;
+        //Conditions
+        if(gpayPayment || creditcardPayment){
+            document.getElementById("paymentType").innerHTML="Payment is Valid";
+        }else{
+            document.getElementById("paymentType").innerHTML="Payment is Invalid";
+        }
+    </script>
+</body>
+</html>

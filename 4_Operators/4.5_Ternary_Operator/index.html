@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary operator</title>
+</head>
+<body>
+    <label for="">Number : </label>
+    <input type="number" id="numberValue"><br><br>
+
+    <button onclick="ternary()">Click me</button>
+
+    <script>
+        let numValue=document.getElementById("numberValue");
+
+        let valu1="positive";
+        let valu2="Negative";
+        let valu3="Zero";
+
+        function ternary(){
+            let inputs=numValue.value;
+            let results=inputs>0?valu1
+                        :inputs==0?valu3
+                        :inputs<0?valu2:"not a number";
+            // let results0=inputs==0?"Neither positive and Nor negative":"";
+            console.log(results);
+            // console.log(results0);
+            
+        }
+    </script>
+</body>
+</html>

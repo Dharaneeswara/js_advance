@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operator</title>
+</head>
+<body>
+    <label for="">Number Of Pages Readed : </label>
+    <span id="pagesCount"></span>
+    <script>
+        let beforeTracking=10;
+        let firstDayTracking=25;
+        let secoundDayTracking=30;
+
+        beforeTracking +=firstDayTracking;//beforeTracking =beforeTracking+firstDayTracking;=35
+        beforeTracking += secoundDayTracking;//65
+
+        let totalPagesReaded=beforeTracking
+
+        console.log(totalPagesReaded);
+        
+        document.getElementById("pagesCount").innerHTML=totalPagesReaded;
+    </script>
+</body>
+</html>

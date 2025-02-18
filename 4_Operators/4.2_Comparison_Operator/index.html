@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operator</title>
+</head>
+<body>
+    <!-- <label for="">Loose equal to : </label>
+    <span id="looseEqual"></span><br><br>
+    <label for="">Strict equal to : </label>
+    <span id="strictEqual"></span><br><br> -->
+
+    <!-- <button onclick="operators()">click me</button> -->
+
+    <script>
+        // let rollNumber=21;
+        // let stringNumber="21";
+
+        // let looseEqual=rollNumber==stringNumber;
+        // let strictEqual=rollNumber===stringNumber;
+
+        // function operators(){
+        //     document.getElementById("looseEqual").innerHTML=looseEqual;
+        //     document.getElementById("strictEqual").innerHTML=strictEqual;
+        // }
+
+        function operators(value1, value2){
+            let isLooseEqual=value1==value2;
+            let isStrictEqual=value1===value2;
+            
+            console.log(isLooseEqual);
+            console.log(isStrictEqual ,"next");
+        }
+        operators(10,"10");
+        operators(10,10);
+        operators(null,undefined);
+        operators(true,1);
+        operators(false,0);
+
+    </script>
+
+</body>
+</html>
