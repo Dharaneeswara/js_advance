@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="hi">div <br> box1</div>
+    <div id="hello">div <br> box2
+        <p id="box4">span <br> box4</p>
+    </div>
+    <div>div <br> box3</div>
+    
+    <p id="old">span <br> box5</p>
+    <p>span <br> box6</p> -->
+
+    <!--SIBLINGS EXAMPLE AT DOM MANIPULATION-->
+    <!-- <div id="parent">
+        <p>first sibling</first></p>
+        <p id="second">second sibling</p>
+        <p>third sibling</p>
+    </div> -->
+
+    <!-- <div>hi</div> -->
+    <script>
+
+        let image=document.createElement("img");
+        image.setAttribute("id","img1");
+        image.src="js_logo.jpg";
+        image.src="js_logo.jpg";
+        image.src="paper.png";
+        let allimg=document.querySelectorAll("img1");
+        for(let i=0;i<=allimg.length;i++){
+
+            document.body.append(allimg[i]);
+            console.log(allimg[i]);
+            
+        }
+
+
+
+
+
+        //BY TAG NAME
+        // let totaldiv=document.getElementsByTagName("div");
+        // console.log(totaldiv);
+        // totaldiv.textContent="dharani";
+        
+        //QUERY SELECTOR
+        // let totalpara=document.querySelector("p");
+        // console.log(totalpara.style.color="red");
+        
+        //QUERY SELECTOR ALL
+        // let totalpara=document.querySelectorAll("div");
+        // for(let i=0;i<=totalpara.length;i++){
+        //     totalpara[i].style.color="blue";
+        //     // console.log(totalpara[i]);
+        // }
+
+        //QUERY SELECTOR ALL WITH ACCESS THE CLASS,ID,TAG AT A TIME
+        // let all=document.querySelectorAll(".hi,#hello,p");
+        // for(let  i=0;i<=all.length;i++){
+        //     all[i].style.color="orange"
+        // }
+
+        // REMOVE CHILD
+        // let parent=document.getElementById("hello");
+        // let child=document.getElementById("box4");
+        // parent.removeChild(child)
+
+        //REPLACE CHILD
+        // let parent=document.getElementById("hello");
+        // let child=document.getElementById("box4");
+        
+        // let news=document.createElement("p")
+        // // news.id="newone";
+        // let newContent=document.createTextNode("hello world");
+        // news.appendChild(newContent);
+        // parent.replaceChild(news, child);
+
+
+        // //SIBLINGS EXAMPLE AT DOM MANIPULATION
+        // let target=document.getElementById("second");
+        // // console.log(target.textContent);
+        // let prev=target.previousElementSibling;
+        // // console.log(prev.textContent);
+        // if(prev){
+        //     prev.textContent="Updated previous sibling";
+        // }
+        
+        // let next=target.nextElementSibling;
+        // // console.log(next.textContent);
+        // if(next){
+        //     next.textContent="Updated next sibling";
+        // }
+        
+        // //CREATE NEW ELEMENT
+        // let newElement=document.createElement("p");
+        // newElement.textContent="hello js";
+        // document.body.append(newElement);
+        // newElement.style.color="red"
+
+                // //Creating image
+                // let imageElement=document.createElement("img");
+                // imageElement.src='js_logo.jpg';
+                // document.body.append(imageElement)
+
+        //SET ATTRIBUTE
+        // syntax - Object.setAttribute(attributename,value)
+
+    </script>
+</body>
+</html>

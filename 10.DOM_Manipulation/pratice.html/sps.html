@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div id="gameArea"></div>
+    <h2 id="result">Choose an option</h2>
+
+    <script>
+        // 1️⃣ Define Choices
+        const choices = ["stone1.png", "paper.png", "scissor.png"];
+
+        // 2️⃣ Create Images (Buttons) for User Selection
+        const gameArea = document.getElementById("gameArea");
+
+        choices.forEach(choice => {
+            let img = document.createElement("img");
+            img.src = choice;
+            img.alt = choice.split(".")[0];
+            img.style.width = "100px";
+            img.style.margin = "10px";
+            img.style.cursor = "pointer";
+
+            // Add Click Event
+            img.addEventListener("click", function () {
+                playGame(choice);
+            });
+
+            gameArea.appendChild(img);
+        });
+
+        // 3️⃣ Function to Handle Game Logic
+        function playGame(userChoice) {
+            let cpuChoice = choices[Math.floor(Math.random() * choices.length)]; // Random CPU choice
+
+            let resultText = determineWinner(userChoice, cpuChoice);
+
+            // Display Result
+            document.getElementById("result").innerText = `You chose: ${userChoice.split(".")[0]} | CPU chose: ${cpuChoice.split(".")[0]} | ${resultText}`;
+        }
+
+        // 4️⃣ Function to Compare Choices
+        function determineWinner(user, cpu) {
+            if (user === cpu) return "It's a Tie! 😐";
+            
+            if (
+                (user === "rock.png" && cpu === "scissors.png") ||
+                (user === "paper.png" && cpu === "rock.png") ||
+                (user === "scissors.png" && cpu === "paper.png")
+            ) {
+                return "You Win! 🎉";
+            } else {
+                return "CPU Wins! 😢";
+            }
+        }
+    </script>
+</body>
+</html>
