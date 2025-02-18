@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let prom=new Promise(function(resolve,reject){
+        //     reject("hi dharani");
+        // })
+        
+        // // prom.then(function(succesmsg){
+        // //     console.log(succesmsg);
+            
+        // // },function(errormsg){
+        // //     console.log(errormsg);
+        // // })
+        // //--------->OR<------------
+        // prom.then(function(succesmsg){ // this way is the proper way
+        //     console.log(succesmsg);
+            
+        // })
+        // .catch(function(errormsg){
+        //     console.log(errormsg);
+        // })
+
+        //----------------------------------------------------------------------
+
+        let prom=new Promise((res,rej)=>{
+            setTimeout(()=>{
+                console.log("dharani");
+                
+            },5000)
+            // res("dharani")
+        })
+        
+        console.log(prom);
+        
+    </script>
+</body>
+</html>

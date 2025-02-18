@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // CALLBACK
+        function sayHello(name,callback){
+            console.log(`${name}`);
+            // console.log(`name is : ${name}`);
+            callback();                  //HERE WE CALL THE CALLBACK FUNCTION INTO THE "SAYHELLO() FUNCTION PARAMETER" WHILE CALLING THE "SAYHELLO FUNCTION"
+             
+        }
+        function sayGoodBye(){
+            console.log(`Goodbye!`);
+        }
+        // sayHello("Dharani",sayGoodBye);
+        sayHello("Hello!",sayGoodBye);
+
+        //---------------------------------]
+        // //NORMAL FUNCTION
+        // function sayHello(){
+        //     console.log("hi");
+        //     call();     //HERE WE DIRECTLY CALL THE FUNCTION 
+        // }
+        // function call(){
+        //     console.log("hello");
+            
+        // }
+        // sayHello();
+    </script>
+</body>
+</html>
